@@ -62,6 +62,8 @@ Use the Remix IDE Ethereum programming environment or any similar environment to
    
    * Copy the smart contract code and paste it into the newly created file.
 
+   * Click the link ( https://github.com/Shaguftaseraj/eth-avax/blob/main/errorHandling ) and copy paste the code.
+
 4. Compile the Contract:
    
    *  Go to the "Solidity Compiler" tab on the left panel.
@@ -102,9 +104,9 @@ Use the Remix IDE Ethereum programming environment or any similar environment to
     
 9 . Testing Fallback and Receive:
 
-   * Attempt to send ether directly to the contract address from the "Remix London (VM) " environment .
+   *  Attempt to send ether directly to the contract address from the "Remix London (VM) " environment .
      
-   * Observe the transaction failure due to the revert() statements in the fallback and receive functions.
+   *  Observe the transaction failure due to the revert() statements in the fallback and receive functions.
 
 # Authors :
 
@@ -116,9 +118,3 @@ Github : https://github.com/Shaguftaseraj
 # License : 
 
 The Project is licensed under the MIT License - see the link ( https://github.com/Shaguftaseraj/eth-avax/blob/main/LICENSE ) for details.
-
-
-
-
-
-
