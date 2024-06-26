@@ -1,0 +1,61 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+/// Demonstrates require(), assert(), and revert() statements
+contract ErrorHandling {
+    address public owner;
+    uint public balance;
+
+    ///Sets the contract deployer as the owner and initializes balance to zero
+    constructor() {
+        owner = msg.sender;
+        balance = 0;
+    }
+
+    /// Deposits an amount into the contract
+    /// Only the owner can deposit, and amount must be positive
+    function deposit(uint amount) public {
+        require(msg.sender == owner, "Only the owner can deposit");
+        require(amount > 0, "Amount must be positive");
+
+        balance += amount;
+    }
+
+    /// amount The amount to withdraw
+    /// Only the owner can withdraw, and amount must not exceed balance
+    function withdraw(uint amount) public {
+        require(msg.sender == owner, "Only the owner can withdraw");
+        require(amount <= balance, "Insufficient balance");
+
+        balance -= amount;
+        // Assert that balance should never be negative
+        assert(balance >= 0);
+    }
+
+    function reset() public {
+        require(msg.sender == owner, "Only the owner can reset");
+        
+        balance = 0;
+    }
+
+    /// @return The current balance
+    function getBalance() public view returns (uint) {
+        return balance;
+    }
+
+    /// Test function to demonstrate assert() failure (for demonstration only)
+    /// Fails if the balance is zero
+    function testAssertFailure() public view {
+        assert(balance > 0); // This will fail if the balance is zero
+    }
+
+    /// Fallback function to handle unexpected ether transfers
+    fallback() external payable {
+        revert("Ether transfers not allowed");
+    }
+
+    /// Receive function to handle ether transfers
+    receive() external payable {
+        revert("Direct ether transfers not allowed");
+    }
+}
