@@ -19,7 +19,7 @@ Using the require(), assert(), and revert() commands, this Solidity smart contra
 
 3. Balance Management:
 
-  * Allows the owner to deposit and withdraw funds, maintaining an internal balance and ensuring it never becomes negative.
+    * Allows the owner to deposit and withdraw funds, maintaining an internal balance and ensuring it never becomes negative.
     
 4. Reset Functionality:
 
@@ -27,15 +27,15 @@ Using the require(), assert(), and revert() commands, this Solidity smart contra
       
 5. Demonstration of assert() Failure:
 
- * Includes testAssertFailure to show how assert() can be used to catch conditions that should never occur, serving as a practical example for error detection.
+    * Includes testAssertFailure to show how assert() can be used to catch conditions that should never occur, serving as a practical example for error detection.
    
 6. Fallback and Receive Function Handling:
 
-* Implements fallback and receive functions to ensure that unauthorized ether transfers to the contract are rejected, preventing unexpected behavior.
+    * Implements fallback and receive functions to ensure that unauthorized ether transfers to the contract are rejected, preventing unexpected behavior.
   
 7. Public View Function:
 
-* Offers a getBalance function to allow public access to the current balance, demonstrating read-only state inspection.
+    * Offers a getBalance function to allow public access to the current balance, demonstrating read-only state inspection.
 
 The code serves as a helpful teaching tool for learning error management in decentralized systems because of these characteristics, which together demonstrate how to construct and handle mistakes
 in a Solidity smart contract.
@@ -72,15 +72,15 @@ Use the Remix IDE Ethereum programming environment or any similar environment to
      
 5. Deploy the Contract:
    
-  * Navigate to the "Deploy & Run Transactions" tab.
+     * Navigate to the "Deploy & Run Transactions" tab.
     
-  * Ensure "Remix LLondon (VM) " is selected in the "Environment" dropdown.
+     * Ensure "Remix LLondon (VM) " is selected in the "Environment" dropdown.
     
-  * Click the "Deploy" button under the ErrorHandling contract.
+     * Click the "Deploy" button under the ErrorHandling contract.
     
 6. Interact with the Deployed Contract:
    
-  * Once deployed, the contract instance appears under "Deployed Contracts."
+     * Once deployed, the contract instance appears under "Deployed Contracts."
     
 7. Expand the contract instance to view available functions:
    
@@ -96,13 +96,15 @@ Use the Remix IDE Ethereum programming environment or any similar environment to
    
 8. Monitor the Output:
     
-  * View transaction results in the Remix console and observe balance changes.
+    * View transaction results in the Remix console and observe balance changes.
     
-  * If errors occur (e.g., unauthorized access or invalid operations), check the console for error messages.
+    * If errors occur (e.g., unauthorized access or invalid operations), check the console for error messages.
     
 9 . Testing Fallback and Receive:
 
-  * Attempt to send ether directly to the contract address from the "Remix London (VM) " environment . Observe the transaction failure due to the revert() statements in the fallback and receive functions.
+   * Attempt to send ether directly to the contract address from the "Remix London (VM) " environment .
+     
+   * Observe the transaction failure due to the revert() statements in the fallback and receive functions.
 
 # Authors :
 
@@ -113,7 +115,7 @@ Github : https://github.com/Shaguftaseraj
 
 # License : 
 
-The Project is licensed under the MIT License - see the link ( ) for details.
+The Project is licensed under the MIT License - see the link ( https://github.com/Shaguftaseraj/eth-avax/blob/main/LICENSE ) for details.
 
 
 
